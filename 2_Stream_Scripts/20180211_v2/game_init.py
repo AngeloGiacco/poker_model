@@ -8,6 +8,10 @@ import board
 import hand
 import player
 import pot
+#import databaseConnection
+
+#dbfilepath = "..."
+#database = Database(dbfilepath)
 
 def init_players(nr_of_players, starting_chips):
     ''' players initialization '''
