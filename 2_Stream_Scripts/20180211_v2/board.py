@@ -18,35 +18,38 @@ class Board(object):
 
     def show_board(self):
         ''' show board '''
-
-        return self.__board
+        return(" ".join([c.show_card() for c in self.__board]))
 
     def flop(self):
         ''' show flop '''
 
-        return self.__flop
+        return(" ".join([c.show_card() for c in self.__flop]))
 
     def flop1(self):
         ''' show flop1 '''
 
-        return self.__flop1
+        return self.__flop1.show_card()
 
     def flop2(self):
         ''' show flop2 '''
 
-        return self.__flop2
+        return self.__flop2.show_card()
 
     def flop3(self):
         ''' show flop3 '''
 
-        return self.__flop3
+        return self.__flop3.show_card()
 
     def turn(self):
         ''' show turn '''
 
-        return self.__turn
-    
+        return self.__turn.show_card()
+
     def river(self):
         ''' show river '''
 
-        return self.__river
+        return self.__river.show_card()
+
+    def __len__(self):
+        return len(self.__board)
+
